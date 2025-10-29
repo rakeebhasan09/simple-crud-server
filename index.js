@@ -33,6 +33,13 @@ async function run() {
 		const databaseName = client.db("simple_crud_db");
 		const usersCollection = databaseName.collection("users");
 
+		// User Get API
+		app.get("/users", async (req, res) => {
+			const cursor = usersCollection.find();
+			const result = await cursor.toArray();
+			res.send(result);
+		});
+
 		// User Post API
 		app.post("/users", async (req, res) => {
 			const newUserInfo = req.body;
