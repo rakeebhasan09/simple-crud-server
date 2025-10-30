@@ -11,8 +11,7 @@ app.use(express.json());
 
 // simple_crud_user
 // ZG7rhFURhWDjwET9
-const uri =
-	"mongodb+srv://simple_crud_user:ZG7rhFURhWDjwET9@cluster0.x65kkeb.mongodb.net/?appName=Cluster0";
+const uri = "uri-comes-from-another-file";
 
 const client = new MongoClient(uri, {
 	serverApi: {
